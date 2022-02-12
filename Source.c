@@ -25,12 +25,12 @@ int main(int argc, char** argv) {
 	if ((parsed_symbols_array = parse_input_string(raw_input, strlen(raw_input), &parsed_symbols)) == -1)
 		return -1;
 
-	printf("----%d\n", sizeof(node));
+	
 
 	if (lexer(parsed_symbols_array, parsed_symbols) == -1)
 		return -1;
 
-	node root;
+	
 
 
 	return 0;
