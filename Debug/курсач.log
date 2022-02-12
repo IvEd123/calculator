@@ -1,0 +1,18 @@
+﻿  Source.c
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(34,27): warning C4013: 'calloc' undefined; assuming extern returning int
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(59,13): warning C4047: 'return': 'char **' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(73,25): warning C4013: 'malloc' undefined; assuming extern returning int
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(85,53): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(90,40): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(101,54): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(124,6): warning C4013: 'free' undefined; assuming extern returning int
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(34,1): warning C4047: 'initializing': 'char *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(73,1): warning C4047: 'initializing': 'char **' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(76,1): warning C4047: 'initializing': 'char *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(166,12): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'int'
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(167,14): warning C4047: 'return': 'tokens *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\курсач\курсач\Header.h(132,1): warning C4047: 'initializing': 'tokens *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\курсач\курсач\Source.c(24,102): warning C4047: '==': 'char **' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\курсач\курсач\Source.c(29,55): warning C4047: '==': 'tokens *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\курсач\курсач\Source.c(16,1): warning C4047: 'initializing': 'char *' differs in levels of indirection from 'int'
+  курсач.vcxproj -> C:\Users\IvEda\source\repos\курсач\Debug\курсач.exe

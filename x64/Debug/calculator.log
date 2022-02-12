@@ -1,0 +1,29 @@
+﻿  Source.c
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(37,27): warning C4013: 'calloc' undefined; assuming extern returning int
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(62,13): warning C4047: 'return': 'char **' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(76,25): warning C4013: 'malloc' undefined; assuming extern returning int
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(88,53): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(93,40): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(104,54): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(127,6): warning C4013: 'free' undefined; assuming extern returning int
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(37,1): warning C4047: 'initializing': 'char *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(76,1): warning C4047: 'initializing': 'char **' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(79,1): warning C4047: 'initializing': 'char *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(151,16): warning C4047: 'return': 'tokens *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(175,12): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(175,12): warning C4313: 'printf': '%s' in format string conflicts with argument 1 of type 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(176,14): warning C4047: 'return': 'tokens *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Header.h(135,1): warning C4047: 'initializing': 'tokens *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\tree.h(27,48): warning C4133: '=': incompatible types - from 'node *' to 'node *'
+C:\Users\IvEda\source\repos\calculator\calculator\tree.h(30,24): warning C4133: '=': incompatible types - from 'node *' to 'node *'
+C:\Users\IvEda\source\repos\calculator\calculator\tree.h(26,1): warning C4047: 'initializing': 'node *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\tree.h(38,33): warning C4133: 'function': incompatible types - from 'node *' to 'node *'
+C:\Users\IvEda\source\repos\calculator\calculator\tree.h(55,1): warning C4133: 'initializing': incompatible types - from 'node *' to 'node *'
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(25,66): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(25,102): warning C4047: '==': 'char **' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(28,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(28,9): message : consider using '%zd' in the format string
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(30,55): warning C4047: '==': 'tokens *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(17,1): warning C4047: 'initializing': 'char *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(33,7): warning C4101: 'root': unreferenced local variable
+  calculator.vcxproj -> C:\Users\IvEda\source\repos\calculator\x64\Debug\calculator.exe
