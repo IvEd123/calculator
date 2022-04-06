@@ -1,7 +1,13 @@
 #ifndef TREE_H
 #define TREE_H
 
-#include "Header.h"
+#include "functions.h"
+#include "defines.h"
+
+enum NODE_CHILD {
+	nc_LEFT, 
+	nc_RIGHT
+};
 
 enum NODE_TYPE {
 	n_OPERATOR,
@@ -9,51 +15,28 @@ enum NODE_TYPE {
 	n_VARIABLE
 };
 
-typedef struct  {
-	enum NODE_TYPE type;
-	struct node** children;
-	struct node* parent;
-	int children_num;
+typedef struct node {
+	enum NODE_TYPE m_type;
+	struct node* m_child_left;
+	struct node* m_child_right;
+	struct node* m_parent;
+	_Bool m_has_variable_bellow;
 	union container{
-		enum operators op;
-		float number;
-		variable* var;
+		enum operators m_operator;
+		float m_number;
+		char m_variable;
 	};
 	
 } node;
 
-node* add_child(node* parent, enum NODE_TYPE type) {
-	node* child =  malloc(sizeof(node));
-	parent->children[parent->children_num] = child;
-	child->type = type;
-	parent->children_num++;
-	child->parent = parent;
+node* add_child(node* parent, enum NODE_TYPE type);
 
-	return child;
-}
+node* add_child_ptr(node* parent, node* child, enum NODE_TYPE child_dest);
 
-//delete node and all children
-void delete_node(node* _node) {
-	for (int i = 0; i < _node->children_num; i++)
-		delete_node(_node->children[i]);
-	free(_node->var);
-	free(_node->children);
-}
+void delete_node(node* _node);
 
-//delete node and move it's children to parent node
-//example use cases are multiplying by 1 or addition 0
-/*
-		|				 |
-		a			     a
-		|				/ \
-		b		->     c   d
-      /    \		
-	  c    d		
-*/
+void remove_node(node* _node);
 
-void remove_node(node* _node) {
-	node* parent = _node->parent;
-
-}
+void switch_children(node* _node);
 
 #endif // !TREE_H

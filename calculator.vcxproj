@@ -141,11 +141,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="functions.c" />
     <ClCompile Include="Source.c" />
+    <ClCompile Include="tree.c" />
+    <ClCompile Include="tree_functions.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h" />
+    <ClInclude Include="defines.h" />
+    <ClInclude Include="functions.h" />
     <ClInclude Include="tree.h" />
+    <ClInclude Include="tree_functions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
