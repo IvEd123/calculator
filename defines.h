@@ -1,6 +1,4 @@
-#pragma once
-
-#define DEBUG
+//#define DEBUG
 
 #define MAX_STR_LENGTH 50
 #define MAX_SYMBOL_SEQUENCE_LENGTH 250

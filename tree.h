@@ -3,6 +3,7 @@
 
 #include "functions.h"
 #include "defines.h"
+#include <stdio.h>
 
 enum NODE_CHILD {
 	nc_LEFT, 
@@ -29,14 +30,16 @@ typedef struct node {
 	
 } node;
 
-node* add_child(node* parent, enum NODE_TYPE type);
+node* add_child(node* parent, enum NODE_TYPE type, enum NODE_CHILD child_dest);
 
-node* add_child_ptr(node* parent, node* child, enum NODE_TYPE child_dest);
+node* add_child_ptr(node* parent, node* child, enum NODE_CHILD child_dest);
 
 void delete_node(node* _node);
 
-void remove_node(node* _node);
+void replace_node(node* source_node, node* dst_node, enum NODE_CHILD dst_branch, enum NODE_CHILD source_branch);
 
 void switch_children(node* _node);
+
+void print_tree(node* _node);
 
 #endif // !TREE_H

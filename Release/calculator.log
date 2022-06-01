@@ -1,0 +1,24 @@
+﻿  functions.c
+C:\Users\IvEda\source\repos\calculator\calculator\functions.c(38,10): warning C4013: 'printf' undefined; assuming extern returning int
+C:\Users\IvEda\source\repos\calculator\calculator\functions.c(39,13): warning C4047: 'return': 'char **' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\functions.c(86,13): warning C4047: 'return': 'char **' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\functions.c(179,14): warning C4047: 'return': 'token *' differs in levels of indirection from 'int'
+  solution.c
+  Source.c
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(17,58): warning C4047: 'function': 'char *' differs in levels of indirection from 'char **'
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(17,49): warning C4024: 'parse_input_string': different types for formal and actual parameter 1
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(17,76): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char **'
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(17,67): warning C4024: 'strlen': different types for formal and actual parameter 1
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(17,106): warning C4047: '==': 'char **' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(20,75): warning C4047: '==': 'token *' differs in levels of indirection from 'int'
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(47,45): warning C4047: 'function': 'char **' differs in levels of indirection from 'char *'
+C:\Users\IvEda\source\repos\calculator\calculator\Source.c(47,36): warning C4024: 'calculate_equation': different types for formal and actual parameter 1
+  tree.c
+  tree_functions.c
+C:\Users\IvEda\source\repos\calculator\calculator\tree_functions.c(15,29): warning C4047: '=': 'char' differs in levels of indirection from 'char *'
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+C:\Users\IvEda\source\repos\calculator\calculator\solution.c(43): warning C4715: 'solve_consts': not all control paths return a value
+  All 24 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  calculator.vcxproj -> C:\Users\IvEda\source\repos\calculator\Release\calculator.exe

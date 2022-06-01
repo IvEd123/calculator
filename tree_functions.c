@@ -1,5 +1,3 @@
-#pragma once
-
 #include "tree_functions.h"
 
 
@@ -106,14 +104,14 @@ node* build_tree(token* token_array, char** symbols, int length) {
 	memset(priority_map, 0, sizeof(int));
 	int level = 0;
 	int* mult_ops_array = malloc(length);
-	int mult_ops_num = 0;;
+	int mult_ops_num = 0;
 	
 	// set higher priority for parenthesized expressions
 	for (int i = 0; i < length; i++) {
 		if (token_array[i] == t_PARENTHESE_OPEN) 
-			level+=2;
+			level+=4;
 		else if (token_array[i-1] == t_PARENTHESE_CLOSE)
-			level-=2;
+			level-=4;
 		priority_map[i] = level;
 		if (token_array[i] == t_MULIPLICATION || token_array[i] == t_DIVISION) {
 			mult_ops_array[mult_ops_num] = i;
@@ -121,48 +119,30 @@ node* build_tree(token* token_array, char** symbols, int length) {
 		}
 	}
 	
-
-	
- 	
 #ifdef DEBUG
-	
-	for (int i = 0; i < length; i++) {
+	for (int i = 0; i < length; i++) 
 		printf("%c", symbols[i][0]);
-	}
 	printf("\n");
-	for (int i = 0; i < length; i++) {
+	for (int i = 0; i < length; i++) 
 		printf("%d", priority_map[i]);
-	}
 	printf("\n");
-
 #endif // DEBUG
 
 	node* node = create_node_from_break(token_array, symbols, priority_map, length);
 	node->m_parent = NULL;
 	has_variables(node);
 	return node;
-
-	/*
-	token* left_array = token_array;
-	int left_len;
-	token* right_array;
-	int right_len;
-	for (int i = 0; i < length; i++) {
-		if (token_array[i] == t_EQUALS) {
-			left_len = i + 1;
-			right_array = token_array + i;
-			right_len = length - i;
-		}
-	}
-	*/
 }
 
-static _Bool has_variables(node* _node) {
+static bool has_variables(node* _node) {
 	_Bool res = false;
 	if (_node->m_type == n_OPERATOR) {
-		res |= has_variables(_node->m_child_left);
-		res |= has_variables(_node->m_child_right);
-		
+		_Bool left =  has_variables(_node->m_child_left);
+		_Bool right =  has_variables(_node->m_child_right);
+		res = left || right;
+		if (left && right && (_node->m_operator == op_MULIPLY || _node->m_operator == op_DEVIDE)) {
+			printf("Not a linear equation\n");
+		}
 	}
 	else {
 		if (_node->m_type == n_VARIABLE)
@@ -174,10 +154,3 @@ static _Bool has_variables(node* _node) {
 	return res;
 }
 
-float solve(node* root) {
-	float result = 0;
-
-
-
-	return result;
-}

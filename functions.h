@@ -39,6 +39,7 @@ enum mapped {
 	m_EQUALS,
 	m_DIGIT,
 	m_LATIC_CHAR,
+	m_PARENTHESE,
 	m_UNKNOWN
 };
 
@@ -49,6 +50,8 @@ token* lexer(char** symbols, int symbol_num);
 //check if there's more or less than one '=' or parenthesis aren't closed
 int check_syntax_errors(token* token_array, int token_num);
 
+int delete_spaces(char* raw_string, int length);
 
+void paste_symbol(char** dst, int symb_ptr, int* arr_ptr, char* src, char symb);
 
 #endif // !1

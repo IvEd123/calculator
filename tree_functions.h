@@ -1,3 +1,7 @@
+#ifndef TREE_FUNCTIONS_H
+#define TREE_FUNCTIONS_H
+
+
 #include "tree.h"
 #include "functions.h"
 
@@ -28,6 +32,8 @@ static node* create_node_from_break(token* token_array, char** symbols, int* pri
 
 node* build_tree(token* token_array, char** symbols, int length);
 
-static _Bool has_variables(node*);
+static bool has_variables(node*);
 
 float solve(node* root);
+
+#endif // !TREE_FUNCTIONS_H

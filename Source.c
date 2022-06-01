@@ -7,16 +7,9 @@
 #include "tree.h"
 #include "functions.h"
 #include "tree_functions.h"
+#include "Solution.h"
 
-
-int main(int argc, char** argv) {
-
-	char* raw_input = (char*)malloc(MAX_STR_LENGTH);
-
-	printf("Enter expression: \n");
-
-	fgets(raw_input, MAX_STR_LENGTH, stdin);
-
+float calculate_equation(char** raw_input) {
 	int parsed_symbols_num;
 	char** parsed_symbols_array;
 	token* token_array;
@@ -31,12 +24,32 @@ int main(int argc, char** argv) {
 	if (error_code != 0)
 		return -1;
 
-
 	node* root = build_tree(token_array, parsed_symbols_array, parsed_symbols_num);
 
-	float result = solve(root);
+	return solve(root);
+}
 
-	printf("Result: %f", result);
+int main(int argc, char** argv) {
+
+
+
+	char* raw_input = (char*)malloc(MAX_STR_LENGTH);
+
+	printf("Enter expression:\n");
+
+	fgets(raw_input, MAX_STR_LENGTH, stdin);
+
+	if (raw_input[0] == '\n') {
+		printf("Empty string\n");
+		return -1;
+	}	
+
+	float result = calculate_equation(raw_input);
+
+	printf("\nResult: %f\n", result);
 
 	return 0;
 }
+
+//ѕроблемы:
+//операции с несколькими переменными
